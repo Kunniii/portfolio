@@ -2,10 +2,13 @@ version: '3.9'
 
 services:
   frontend:
-    image: node:alpine
+    image: node:17-alpine
+    container_name: portfolio-frontend
     build: .
     volumes:
-      - ./src/:/portfolio/
+      - ./portfolio/:/portfolio/
     ports:
-      - 3000:3000
-    command: npm run dev
+      - 8080:8080
+    command: npm run serve
+
+    

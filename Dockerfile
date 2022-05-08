@@ -1,11 +1,11 @@
-FROM node:alpine
+FROM node:17-alpine
 WORKDIR /portfolio
+EXPOSE 8080
 
-EXPOSE 3000
-
-COPY ./src/* /portfolio/
+COPY ./portfolio/package*.json /portfolio/
 RUN npm install
 
+COPY ./portfolio/ /portfolio/
 
-CMD [ "npm" "run" "dev"]
+CMD "npm run serve"
 
