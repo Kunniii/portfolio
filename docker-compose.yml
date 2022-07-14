@@ -5,7 +5,7 @@ services:
     container_name: portfolio-frontend
     build: .
     volumes:
-      - ./portfolio/:/portfolio/
+      - ./portfolio-src/:/portfolio/
     ports:
       - 8080:8080
     command: npm run serve
