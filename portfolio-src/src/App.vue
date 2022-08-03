@@ -6,10 +6,11 @@
 </template>
 
 <script>
+    import ScrollReveal from "scrollreveal";
+    
     import TheHeader from "./components/TheHeader.vue";
     import TheMain from "./components/TheMain.vue";
 
-    import ScrollReveal from "scrollreveal";
 
     export default {
         name: "App",
